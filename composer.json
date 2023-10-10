@@ -1,0 +1,18 @@
+{
+  "name": "ppd/meparser",
+  "description": "The simpliest parser of mathematical expressions",
+  "version": "0.0.1",
+  "type": "project",
+  "keywords": ["simpliest", "simple", "math", "mathematic", "mathematical", "expressions", "expression", "expr", "parser"],
+  "authors": [
+    {
+      "name": "Pavlo Pashchevskyi",
+      "email": "googalltooth@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Application\\": "Application"
+    }
+  }
+}

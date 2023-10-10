@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  php71_cli:
+    build:
+      context: ./
+      dockerfile: ./dockerfiles/php7.1/Dockerfile
+    image: php71_cli
+    container_name: php71_cli
+    # If you want to run specific bash command after container start
+    # command: >
+    #  bash -c "echo 'You can runyour own command here'
+    #  && echo 'multiple command too'"
+    volumes:
+      # web files will be persisted to /web_volume/
+      - ../:/home/jenkins/cli/php/
+      # override and persist php.ini config
+      - ./config_override/php71.ini:/etc/php/7.1/cli/php.ini
+      # override and persist apache config
+      # if you need ioncube loader, it will be loaded from php.ini
+    stdin_open: true
+    tty: true
